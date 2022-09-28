@@ -1,20 +1,27 @@
 addEventListener("DOMContentLoaded", () => {
-    console.log(`1. En una granja se requiere saber alguna información para determinar el precio de venta por cada kilo
-    de huevo. precio se determina a traves del promedio de calidad de las N gallinas que hay en la
-    granja. La calidad de cada gallina se obtiene según la formula:
-    calidad = (peso de la gallina * altura de la gallina)/Numero de huevos que pone;`)
+    console.log(`2. Hacer un algoritmo que al ingresar 2 números por la pantalla y se calcule la suma, resta, multiplicación
+    y división. El proceso debe terminar cuando se hallan realizado 10 procesos (Hacer uso de
+    contadores`)
 
-    let N = 0, i=0;
-    do{
-        if(!N){
-            N = Number(prompt("Cuantas gallinas hay en la granja"));
-            i++;
-        }
-        let peso = parseFloat(prompt(`Ingresa el peso de la gallina #${i} en Kilos: `))
-        let altura = parseFloat(prompt(`Ingrese la altuta de la gallina #${i} en Cemtimetros `))
-        let num = Number(prompt(`Ingresa el número de huevos que pone la gallina #${i}: al dia`))
-        let calidad = (peso * altura) / num
-        alert(`la gallina #${i} tiene un precio por kilo de huevo de : ${Math.round((calidad / N))} `);
-        i++;
-    }while(N==i)
+
+    let CP = 0 
+
+    while (CP < 10){
+
+        let n1 = Number(prompt("Ingrese un numero (n1): ")) 
+        let n2 = Number(prompt("Ingrese un numero diferente de cero (n2): "))
+
+        let suma = n1 + n2  
+        let multiplicacion = n1 * n2
+        let resta = n1 - n2
+        let division = n1 / n2
+
+
+        alert(`${n1} + ${n2} = ${suma}`)  
+        alert(`${n1} * ${n2} = ${multiplicacion}`)
+        alert(`${n1} - ${n2} = ${resta}`)
+        alert(`${n1} / ${n2} = ${division}`)
+        
+        CP+=1
+    }
 })
