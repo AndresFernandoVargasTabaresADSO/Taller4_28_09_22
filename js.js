@@ -1,21 +1,20 @@
 addEventListener("DOMContentLoaded", () => {
-    console.log(`3. Programa para solicitar el nombre, apellido, edad y la nota promedio de 5 estudiantes de un curso de
-    computación.`)
+    console.log(`4. 42 personas toman parte de un baile. Durante la fiesta una dama bailó con 7 caballeros, una segunda
+    dama con 8, una tercera con 9, y así sucesivamente hasta que la última bailó con todos los hombres.
+    Cuantas damas había en el baile?`)
 
 
-    let estudiantes = 0
-    let acum = 0
+    let mujeres = 0 
+    let personas = 0
+    let hombres = 0
 
-    while(estudiantes<5){
-        let nombre = String(prompt(`Ingresa tu nombre y apellido: `))
-        let edad = String(prompt(`Ingresa tu edad: `))
-        let nota = Number(prompt(`Ingresa tu nota: `))
-
-        console.log(`Estudiante: ${nombre}  Nota: ${nota}`)
-        estudiantes+=1
-        acum+=nota
+    while (personas <= 42){ 
+        mujeres += 1
+        hombres = mujeres + 7  
+        personas = mujeres + hombres  
     }
 
-    let promedio=(acum/5)
-    console.log(`La nota promedio de los 5 estudiantes es: ${promedio}`)
+console.log(`Personas: ${personas} `)
+console.log(`Mujeres: ${mujeres}`)
+console.log(`Hombres: ${hombres}`)
 })
